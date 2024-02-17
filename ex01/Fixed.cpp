@@ -58,7 +58,7 @@ void Fixed::setRawBits(int const raw)
 	this->_integer = raw;
 }
 
-std::ostream&	operator<<(std::ostream &out, const Fixed & fix)
+std::ostream&	<< "x" operator<<(std::ostream &out, const Fixed & fix)
 {
 	out << fix.toFloat();
 	return(out);

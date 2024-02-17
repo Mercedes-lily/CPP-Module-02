@@ -1,19 +1,22 @@
-NAME = BSP
+NAME = bsp
 
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
 OBJ_DIR = obj/
 
-SRCS =	Fixed.cpp \
-		main.cpp
+SRCS =	Fixed.cpp	\
+		main.cpp	\
+		bsp.cpp		\
+		Point.cpp
 
 VPATH = $(OBJ_DIR)
 
 OBJS = $(SRCS:%.cpp=%.o)
 OBJ_PRE = $(addprefix $(OBJ_DIR), $(OBJS))
 
-DEP = Fixed.hpp
+DEP =	Fixed.hpp	\
+		Point.hpp
 
 all: $(NAME)
 
